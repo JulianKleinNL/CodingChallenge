@@ -1,10 +1,10 @@
 import React from 'react';
-import Store from './components/Store';
+import Shop from './components/Shop';
 
 const App = () => {
   return (
     <div className="App">
-      <Store />
+      <Shop />
     </div>
   );
 };
