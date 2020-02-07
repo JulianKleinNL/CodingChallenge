@@ -18,5 +18,8 @@ module.exports = {
   plugins: ['react-hooks'],
   env: {
     jest: true
+  },
+  rules: {
+    'react/prop-types': 'off',
   }
 };

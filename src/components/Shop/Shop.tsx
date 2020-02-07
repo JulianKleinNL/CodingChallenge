@@ -1,9 +1,21 @@
 import React from 'react';
+import Agent from '../Agent';
 
-type StoreProps = {};
-
-const Store: React.FC<StoreProps> = () => {
-  return <div></div>;
+type ShopProps = {
+  shop: Shop;
 };
 
-export default Store;
+const Shop: React.FC<ShopProps> = ({ shop }) => {
+  const { id, agents, name } = shop;
+  const agentsList = agents
+    ? agents.map(agent => <Agent key={agent.id} agent={agent} />)
+    : null;
+  return (
+    <li>
+      <p>{`${id}: ${name}`}</p>
+      {agentsList && <ul>{agentsList}</ul>}
+    </li>
+  );
+};
+
+export default Shop;

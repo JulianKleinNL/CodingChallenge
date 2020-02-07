@@ -1,10 +1,12 @@
 import React from 'react';
 import Shop from './components/Shop';
+import ShopList from './components/ShopList';
 
 const App = () => {
+  const mockShops: Shop[] = [];
   return (
     <div className="App">
-      <Shop />
+      <ShopList shops={mockShops} />
     </div>
   );
 };
